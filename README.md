@@ -20,8 +20,7 @@ Project **STM32 Time Clock** – một ví dụ điển hình về thiết kế 
    - Độc lập với task RTC nhờ FreeRTOS  
 
 3. **UART Task**:  
-   - Nhận câu lệnh từ PC (đặt giờ, xem trạng thái)  
-   - Gửi phản hồi về định dạng “HH:MM:SS”
+   - Nhận dữ liệu debug định dạng “HH:MM:SS”
 
 ## ♻️ Thư viện có thể tái sử dụng
 
