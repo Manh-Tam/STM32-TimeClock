@@ -4,7 +4,7 @@ Project **STM32 Time Clock** – một ví dụ điển hình về thiết kế 
 
 - 🕒 **I²C**: giao tiếp với module RTC để cập nhật thời gian chính xác
 - 🖥️ **OLED**: hiển thị thời gian, trạng thái hệ thống
-- 🧵 **FreeRTOS**: quản lý song song các task như đọc RTC, cập nhật OLED, xử lý UART và nút nhấn
+- 🧵 **FreeRTOS**: quản lý song song các task như đọc RTC, cập nhật OLED, xử lý UART 
 - 📡 **UART**: giao tiếp với máy tính/thiết bị ngoài để cấu hình hoặc debug
 
 ---
@@ -25,7 +25,7 @@ Project **STM32 Time Clock** – một ví dụ điển hình về thiết kế 
 
 ## ♻️ Thư viện có thể tái sử dụng
 
-- `RTC*`: driver giao tiếp và xử lý RTC qua I²C  
-- `SSD1306*`: driver hiển thị trên OLED  
+- `RTC`: driver giao tiếp và xử lý RTC qua I²C  
+- `SSD1306`: driver hiển thị trên OLED  
 → Bạn có thể **tách riêng** hai thư viện này để tái sử dụng trong các project khác.
   
