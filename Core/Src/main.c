@@ -119,8 +119,13 @@ int main(void)
 
   DateTimeQueueHandle = xQueueCreate(5, sizeof(DateTime_HandleTypeDef));
 
-  xTaskCreate(StartRTCTask, "RTC Task", 128, NULL, 4, &RTCTaskHandle);
-  xTaskCreate(StartSSD1306Task, "SSD1306 Task", 128, NULL, 3, &SSD1306TaskHandle);
+  uint8_t status = 0;
+
+  status = xTaskCreate(StartRTCTask, "RTC Task", 128, NULL, 4, &RTCTaskHandle);
+  configASSERT(status == pdPASS);
+
+  status = xTaskCreate(StartSSD1306Task, "SSD1306 Task", 128, NULL, 3, &SSD1306TaskHandle);
+  configASSERT(status == pdPASS);
 
   vTaskStartScheduler();
   /* USER CODE END 2 */
